@@ -25,41 +25,24 @@ def analizza_coin_completa(coin: str, timeframes: list = None) -> dict:
     with open(path_json, "w") as f:
         json.dump(risultati_grezzi, f, indent=2, default=str)
 
-    # Costruzione lista_con_gruppi e gruppi_indicatori
+    # Carica gruppi indicatori
     with open("gruppi_indicatori.json", "r") as g:
         raw_gruppi = json.load(g)
         gruppi_indicatori = {k.strip().lower().replace(" ", "_"): v for k, v in raw_gruppi.items()}
 
+    # Costruzione lista_con_gruppi
     lista_con_gruppi = []
+    conversione_tf = {"1": "1h", "4": "4h", "15": "15m", "240": "4h"}
+    intervalli_validi = ["15m", "1h", "4h", "1d"]
+
     for tf, lista in grezzi.items():
         tf = str(tf)
-        conversione_tf = {"1": "1h", "4": "4h", "15": "15m", "240": "4h"}
         tf = conversione_tf.get(tf, tf)
 
-    intervalli_validi = ["15m", "1h", "4h", "1d"]
-    if tf not in intervalli_validi:
-        print(f"⚠️ Interval non valido: {tf} → salto {coin}")
-        continue
-    conversione_tf = {"1": "1h", "4": "4h", "15": "15m", "240": "4h"}
-    if tf in conversione_tf:
-        tf = conversione_tf[tf]
+        if tf not in intervalli_validi:
+            print(f"⚠️ Interval non valido: {tf} → salto {coin}")
+            continue
 
-    intervalli_validi = ["15m", "1h", "4h", "1d"]
-    if tf not in intervalli_validi:
-        print(f"⚠️ Interval non valido: {tf} → salto {coin}")
-        continue
-    conversione_tf = {"1": "1h", "4": "4h", "15": "15m", "240": "4h"}
-    if tf in conversione_tf:
-        tf = conversione_tf[tf]
-
-    intervalli_validi = ["15m", "1h", "4h", "1d"]
-    if tf not in intervalli_validi:
-        print(f"⚠️ Interval non valido: {tf} → salto {coin}")
-        continue
-    intervalli_validi = ["15m", "1h", "4h", "1d"]
-    if tf not in intervalli_validi:
-        print(f"⚠️ Interval non valido: {tf} → salto {coin}")
-        continue
         for riga in lista:
             nome = riga.get("indicatore", "").strip().lower().replace(" ", "_")
             riga["gruppo"] = gruppi_indicatori.get(nome, "core")
