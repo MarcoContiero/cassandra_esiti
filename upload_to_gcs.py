@@ -2,8 +2,9 @@ from google.cloud import storage
 from google.oauth2 import service_account
 import io
 
-# Usa credenziali dal file già caricato (es. 'credentials.json' su Railway)
-CREDENTIALS_FILE = "credentials.json"
+credentials = service_account.Credentials.from_service_account_file("credentials.json")
+client = storage.Client(credentials=credentials)
+
 
 def upload_to_gcs(bucket_name, gcs_path, data, content_type="application/json"):
     """
