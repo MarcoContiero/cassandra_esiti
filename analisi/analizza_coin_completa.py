@@ -33,7 +33,7 @@ def analizza_coin_completa(coin: str, timeframes: list = None) -> dict:
     lista_con_gruppi = []
     for tf, lista in grezzi.items():
         conversione_tf = {"1": "1h", "4": "4h", "15": "15m", "240": "4h"}
-        tf = conversione_tf.get(tf, tf)
+        tf = conversione_tf.get(str(tf), str(tf))
 
         intervalli_validi = ["15m", "1h", "4h", "1d"]
         if tf not in intervalli_validi:
