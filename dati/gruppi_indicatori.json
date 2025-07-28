@@ -1,0 +1,24 @@
+{
+    "RSI": "core",
+    "MACD": "core",
+    "EMA": "core",
+    "Bollinger Bands": "core",
+    "Parabolic SAR": "core",
+    "Volume": "core",
+    "scenario_finale": "core",
+    "Multi-Timeframe": "core",
+
+    "Pattern Tecnici": "optional",
+    "FVG": "optional",
+    "Gann": "optional",
+    "Fibonacci": "optional",
+    "Ciclica": "optional",
+    "massimi_minimi": "optional",
+    "MA Cross": "optional",
+    
+    "ADX": "extra",
+    "elliot": "extra",
+    "fasi_lunari": "extra",
+    "Ichimoku": "extra"
+  }
+  
