@@ -2,6 +2,13 @@ import requests
 import pandas as pd
 
 def scarica_ohlcv_binance(symbol: str, interval: str, limit: int = 1000) -> pd.DataFrame:
+    intervalli_validi = [
+        "1m", "3m", "5m", "15m", "30m",
+        "1h", "2h", "4h", "6h", "8h", "12h",
+        "1d", "3d", "1w", "1M"
+    ]
+    if interval not in intervalli_validi:
+        raise ValueError(f"❌ Interval non valido per Binance: {interval}")
     """
     Scarica dati OHLCV da Binance tramite REST API e restituisce un DataFrame standard.
     """
