@@ -1,0 +1,1 @@
+# Inizializzatore pacchetto riassunti
