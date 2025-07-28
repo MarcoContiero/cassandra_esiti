@@ -32,15 +32,23 @@ def analizza_coin_completa(coin: str, timeframes: list = None) -> dict:
 
     lista_con_gruppi = []
     for tf, lista in grezzi.items():
-        intervalli_validi = ["15m", "1h", "4h", "1d"]
-        if tf not in intervalli_validi:
-            print(f"⚠️ Interval non valido: {tf} → salto {coin}")
-            continue
-            for riga in lista:
-                nome = riga.get("indicatore", "").strip().lower().replace(" ", "_")
-                riga["gruppo"] = gruppi_indicatori.get(nome, "core")
-                riga["timeframe"] = tf
-                lista_con_gruppi.append(riga)
+    conversione_tf = {"1": "1h", "4": "4h", "15": "15m", "240": "4h"}
+    if tf in conversione_tf:
+        tf = conversione_tf[tf]
+
+    intervalli_validi = ["15m", "1h", "4h", "1d"]
+    if tf not in intervalli_validi:
+        print(f"⚠️ Interval non valido: {tf} → salto {coin}")
+        continue
+    intervalli_validi = ["15m", "1h", "4h", "1d"]
+    if tf not in intervalli_validi:
+        print(f"⚠️ Interval non valido: {tf} → salto {coin}")
+        continue
+        for riga in lista:
+            nome = riga.get("indicatore", "").strip().lower().replace(" ", "_")
+            riga["gruppo"] = gruppi_indicatori.get(nome, "core")
+            riga["timeframe"] = tf
+            lista_con_gruppi.append(riga)
 
     # Genera blocchi (ora con gruppi_indicatori passati)
     blocchi = genera_blocchi_analisi_finale(
