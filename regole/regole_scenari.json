@@ -1,0 +1,108 @@
+{
+    "compressione": {
+        "descrizione": "Fase di bassa volatilit\u00e0, BB strette, EMA ravvicinate",
+        "condizioni": {
+            "bb_width_pct": "< 4",
+            "volumi_in_calma": true,
+            "distanza_ema9_21": "< 1"
+        }
+    },
+    "breakout": {
+        "descrizione": "Rottura di una resistenza con conferma di volumi e EMA",
+        "condizioni": {
+            "rottura_resistenza": true,
+            "volumi_alti": true,
+            "ema9_vs_ema21": ">"
+        }
+    },
+    "falso_breakout": {
+        "descrizione": "Breakout fallito con ritorno rapido nel range",
+        "condizioni": {
+            "breakout_fallito": true,
+            "volumi_alti": false,
+            "rsi_divergente": true
+        }
+    },
+    "pullback": {
+        "descrizione": "Ritorno a testare un supporto o resistenza dopo rottura",
+        "condizioni": {
+            "ha_rotto_livello": true,
+            "ritest_su_livello": true
+        }
+    },
+    "rialzo_ordinato": {
+        "descrizione": "Trend pulito con EMA allineate e volumi crescenti",
+        "condizioni": {
+            "ema9>ema21>ema50": true,
+            "prezzo_sopra_ema": true,
+            "volumi_ok": true
+        }
+    },
+    "compressione_esplosiva": {
+        "descrizione": "Compressione con segnali di rottura imminente",
+        "condizioni": {
+            "scenario_prec": "compressione",
+            "candle_break": true,
+            "volumi_spike": true
+        }
+    },
+    "confluenza_bullish": {
+        "descrizione": "Almeno 3 segnali rialzisti concordi",
+        "condizioni": {
+            "segnali_bullish": ">= 3"
+        }
+    },
+    "confluenza_bearish": {
+        "descrizione": "Almeno 3 segnali ribassisti concordi",
+        "condizioni": {
+            "segnali_bearish": ">= 3"
+        }
+    },
+    "pre_breakout": {
+        "descrizione": "Compressione in corso e segnali di rottura imminente",
+        "condizioni": {
+            "scenario_prec": "compressione",
+            "ema9_cross_up": true,
+            "bb_in_espansione": true
+        }
+    },
+    "inversione_possibile": {
+        "descrizione": "Condizioni tecniche che suggeriscono cambio di trend",
+        "condizioni": {
+            "rsi_divergente": true,
+            "macd_incrocio": true,
+            "su_livello_chiave": true
+        }
+    },
+    "laterale": {
+        "descrizione": "Prezzo senza direzione chiara, indicatori neutri",
+        "condizioni": {
+            "ema_flat": true,
+            "rsi_neutro": true,
+            "bb_strette": true
+        }
+    },
+    "scarico_post_pump": {
+        "descrizione": "Vendite dopo pump con volumi e divergenze",
+        "condizioni": {
+            "pump_precedente": true,
+            "candle_rossa_grossa": true,
+            "rsi_in_discesa": true
+        }
+    },
+    "rientro_strategico": {
+        "descrizione": "EMA si riordinano dopo un dump, segnale di rientro",
+        "condizioni": {
+            "dump_terminato": true,
+            "ema9_cross_up": true,
+            "bb_mid_test": true
+        }
+    },
+    "incrocio_in_compressione": {
+        "descrizione": "EMA9, EMA21 e BB mid si incrociano in zona stretta",
+        "condizioni": {
+            "incrocio_ema_bb": true,
+            "compressione": true
+        }
+    }
+}
