@@ -18,7 +18,7 @@ def upload_to_gcs(bucket_name, gcs_path, data, content_type="application/json"):
     if isinstance(data, str):
         data = data.encode("utf-8")
 
-    credentials = service_account.Credentials.from_service_account_file(CREDENTIALS_FILE)
+    credentials = service_account.Credentials.from_service_account_file("credentials.json")
     client = storage.Client(credentials=credentials)
     bucket = client.bucket(bucket_name)
     blob = bucket.blob(gcs_path)
