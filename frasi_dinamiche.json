@@ -1,0 +1,71 @@
+{
+  "long": {
+    "breakout": [
+      "Il trend long si sta rafforzando dopo il breakout di una resistenza chiave.",
+      "Il breakout rialzista suggerisce una rinnovata forza da parte dei compratori.",
+      "La rottura dei massimi precedenti alimenta lo scenario long in atto.",
+      "Il superamento tecnico dei livelli chiave conferma la pressione rialzista.",
+      "L'impulso oltre la BB superiore è coerente con una fase di breakout rialzista."
+    ],
+    "in_conferma": [
+      "Il trend long mostra segnali di consolidamento sopra i supporti recenti.",
+      "Il movimento rialzista trova conferma nel mantenimento sopra le medie mobili.",
+      "La struttura long rimane attiva, con i prezzi che consolidano sopra i livelli critici.",
+      "Segnali di conferma sulla spinta long provengono dalla tenuta della BB mid.",
+      "Il contesto resta favorevole ai compratori grazie alla coerenza del trend."
+    ],
+    "pullback": [
+      "Un pullback tecnico all'interno del trend long potrebbe offrire un punto di ingresso.",
+      "La fase correttiva sembra limitata, coerente con una pausa all’interno di un trend rialzista.",
+      "Ritracciamenti controllati possono essere considerati occasioni di acquisto in trend attivo.",
+      "Il movimento in corso appare come una pausa fisiologica del trend positivo.",
+      "Il rientro verso supporti dinamici come le EMA può anticipare una ripartenza."
+    ]
+  },
+  "short": {
+    "breakout": [
+      "La rottura dei supporti conferma un'accelerazione ribassista in atto.",
+      "Il trend short si intensifica dopo il cedimento dei minimi precedenti.",
+      "Il breakout sotto livelli chiave rafforza la struttura ribassista.",
+      "La perdita della BB inferiore è coerente con una pressione discendente strutturata.",
+      "Il contesto tecnico conferma un'esplosione ribassista in atto."
+    ],
+    "in_conferma": [
+      "Il trend short viene confermato dal mantenimento sotto le medie chiave.",
+      "La pressione ribassista resta coerente con la struttura multi-timeframe.",
+      "Conferme operative arrivano dal fallito recupero dei livelli di breakout precedenti.",
+      "Il consolidamento sotto le resistenze rafforza lo scenario short attuale.",
+      "La struttura ribassista rimane integra finché i massimi decrescenti persistono."
+    ],
+    "pullback": [
+      "Un rimbalzo tecnico può offrire opportunità di vendita coerenti con il trend short.",
+      "La fase di pullback si inserisce in un contesto ribassista ancora attivo.",
+      "Movimenti correttivi potrebbero anticipare una nuova onda discendente.",
+      "Il rientro verso le medie può rappresentare una zona di pressione ribassista.",
+      "La spinta short potrebbe riprendere dopo questo recupero temporaneo."
+    ]
+  },
+  "neutro": {
+    "compressione": [
+      "Il mercato si trova in una fase di compressione con direzionalità ridotta.",
+      "La lateralità in corso riflette una compressione tra supporti e resistenze.",
+      "Il contesto neutro suggerisce un possibile breakout imminente.",
+      "La coesistenza di segnali contrastanti è tipica di una fase di accumulo/distribuzione.",
+      "La price action resta compressa senza indicazioni direzionali forti."
+    ],
+    "conflitto": [
+      "Sono presenti forze opposte che annullano una direzione dominante.",
+      "La divergenza tra segnali long e short crea un contesto operativo instabile.",
+      "L’assenza di una chiara dominanza impedisce letture direzionali forti.",
+      "Il mercato mostra conflitti interni tra timeframe e indicatori.",
+      "L’analisi restituisce segnali contrastanti, suggerendo prudenza operativa."
+    ],
+    "attesa": [
+      "La situazione tecnica richiede conferme prima di prendere posizione.",
+      "In assenza di direzione chiara, l’approccio prudente è attendere breakout o segnali forti.",
+      "Non ci sono attualmente condizioni favorevoli per un’operazione ben definita.",
+      "La mancanza di momentum suggerisce l’osservazione piuttosto che l’intervento.",
+      "La pazienza resta la strategia migliore in assenza di catalizzatori chiari."
+    ]
+  }
+}

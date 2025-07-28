@@ -1,0 +1,38 @@
+{
+    "RSI": "core",
+    "MACD": "core",
+    "EMA": "core",
+    "Bollinger Bands": "core",
+    "Parabolic SAR": "core",
+    "Volume": "core",
+    "scenario finale": "core",
+    "Multi-Timeframe": "core",
+
+    "Pattern Tecnici": "optional",
+    "FVG": "optional",
+    "Gann": "optional",
+    "Fibonacci": "optional",
+    "Ciclica": "optional",
+    "massimi minimi": "optional",
+    "MA Cross": "optional",
+    
+    "ADX": "extra",
+    "elliott": "extra",
+    "Fasi Lunari": "extra",
+    "Ichimoku": "extra",
+    "Supporto": "extra",
+    "Resistenza": "extra",
+
+
+    "AROON": "TREND",
+    "AROONOSC": "TREND",
+    "ROC": "MOMENTUM",
+    "ULTOSC": "MOMENTUM",
+    "WILLR": "MOMENTUM",
+    "TRIX": "MOMENTUM",
+    "DI+ vs DI-": "TREND",
+    "CDLDOJI": "PATTERN",
+    "NATR": "VOLATILITÀ"
+
+  }
+  
