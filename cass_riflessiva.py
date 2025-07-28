@@ -18,14 +18,14 @@ def confronta_scenario(previsto, osservato):
 
 
 def scarica_lista_file(bucket_name, prefix):
-    credentials = service_account.Credentials.from_service_account_file(CREDENTIALS_FILE)
+    credentials = service_account.Credentials.from_service_account_file("credentials.json")
     client = storage.Client(credentials=credentials)
     blobs = client.list_blobs(bucket_name, prefix=prefix)
     return [b.name for b in blobs if b.name.endswith(".json")]
 
 
 def scarica_json(bucket_name, blob_name):
-    credentials = service_account.Credentials.from_service_account_file(CREDENTIALS_FILE)
+    credentials = service_account.Credentials.from_service_account_file("credentials.json")
     client = storage.Client(credentials=credentials)
     bucket = client.bucket(bucket_name)
     blob = bucket.blob(blob_name)
