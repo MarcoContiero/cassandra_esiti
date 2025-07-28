@@ -32,6 +32,10 @@ def analizza_coin_completa(coin: str, timeframes: list = None) -> dict:
 
     lista_con_gruppi = []
     for tf, lista in grezzi.items():
+    intervalli_validi = ["15m", "1h", "4h", "1d"]
+    if tf not in intervalli_validi:
+        print(f"⚠️ Interval non valido: {tf} → salto {coin}")
+        continue
         for riga in lista:
             nome = riga.get("indicatore", "").strip().lower().replace(" ", "_")
             riga["gruppo"] = gruppi_indicatori.get(nome, "core")
